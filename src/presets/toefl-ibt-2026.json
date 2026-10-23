@@ -1,0 +1,25 @@
+{
+  "id": "toefl-ibt-2026",
+  "name": "TOEFL iBT (2026 개편)",
+  "category": "어학",
+  "description": "Reading → Listening → Writing → Speaking, 적응형, 약 90분",
+  "source": {
+    "status": "assumed",
+    "checkedAt": "2026-10-23",
+    "urls": [
+      "https://www.manyagroup.com/blog/toefl/toefl-2026-changes/",
+      "https://magoosh.com/toefl/how-long-is-the-toefl-and-how-long-to-study/"
+    ],
+    "note": "2026-01-21 개편. 출처 간 섹션 시간 상충 — ETS 공식 수치 확인 필요."
+  },
+  "sections": [
+    { "id": "reading", "name": "Reading", "mode": "forced", "minutes": 30, "start": "auto",
+      "parts": [{ "id": "reading-all", "name": "Reading", "questions": 50, "minutes": 30 }] },
+    { "id": "listening", "name": "Listening", "mode": "forced", "minutes": 29, "start": "auto",
+      "parts": [{ "id": "listening-all", "name": "Listening", "questions": 47, "minutes": 29 }] },
+    { "id": "writing", "name": "Writing", "mode": "forced", "minutes": 23, "start": "auto",
+      "parts": [{ "id": "writing-all", "name": "Writing", "questions": 12, "minutes": 23 }] },
+    { "id": "speaking", "name": "Speaking", "mode": "forced", "minutes": 8, "start": "auto",
+      "parts": [{ "id": "speaking-all", "name": "Speaking", "questions": 11, "minutes": 8 }] }
+  ]
+}

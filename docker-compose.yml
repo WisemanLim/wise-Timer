@@ -1,0 +1,15 @@
+# wise-timer — 공통 정의 (make local-all | make prod-all). 서버 DB 없음 — 데이터는 브라우저 로컬 저장
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: runtime
+      args: { VITE_BASE: "${VITE_BASE:-/wise-Timer/}" }
+    image: wise-timer-web:${APP_ENV:-local}
+    ports: ["${BIND_HOST:-127.0.0.1}:${WEB_PORT:-8080}:8080"]
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://127.0.0.1:8080/health"]
+      interval: 10s
+      timeout: 3s
+      retries: 12

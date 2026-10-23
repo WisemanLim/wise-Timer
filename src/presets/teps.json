@@ -1,0 +1,23 @@
+{
+  "id": "teps",
+  "name": "TEPS",
+  "category": "어학",
+  "description": "청해 40 → 어휘·문법 25 → 독해 40, 총 105분",
+  "source": {
+    "status": "assumed",
+    "checkedAt": "2026-10-23",
+    "urls": [],
+    "note": "공식(teps.or.kr) 확인 필요. 어휘/문법 분할은 권장치."
+  },
+  "sections": [
+    { "id": "listening", "name": "청해", "mode": "forced", "minutes": 40, "start": "auto",
+      "parts": [{ "id": "lc-all", "name": "청해", "questions": 40, "minutes": 40 }] },
+    { "id": "vocab-grammar", "name": "어휘·문법", "mode": "self", "minutes": 25, "start": "auto",
+      "parts": [
+        { "id": "vocab", "name": "어휘", "questions": 30, "minutes": 10 },
+        { "id": "grammar", "name": "문법", "questions": 30, "minutes": 15 }
+      ] },
+    { "id": "reading", "name": "독해", "mode": "self", "minutes": 40, "start": "auto",
+      "parts": [{ "id": "rc-all", "name": "독해", "questions": 35, "minutes": 40 }] }
+  ]
+}

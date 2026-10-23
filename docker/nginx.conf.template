@@ -1,0 +1,16 @@
+# prod 리허설: GitHub Pages 처럼 ${APP_BASE} 하위 경로에서 정적 파일 서빙
+server {
+    listen 8080;
+    root /usr/share/nginx/html;
+
+    location = /health { add_header Content-Type text/plain; return 200 'ok'; }
+    location = / { return 302 ${APP_BASE}; }
+
+    location ${APP_BASE} {
+        try_files $uri $uri/ ${APP_BASE}index.html;
+    }
+    # 서비스워커·매니페스트는 캐시하지 않음 (PWA 갱신 감지)
+    location ~ (sw\.js|workbox-.*\.js|manifest\.webmanifest)$ {
+        add_header Cache-Control "no-cache";
+    }
+}

@@ -1,0 +1,5 @@
+# wise-timer — prod 모드: runtime 스테이지(nginx) — GitHub Pages 와 같은 /<repo>/ 경로 리허설
+services:
+  web:
+    env_file: [".env.prod"]
+    restart: unless-stopped

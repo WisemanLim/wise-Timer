@@ -1,0 +1,49 @@
+{
+  "id": "toeic-lr",
+  "name": "TOEIC Listening & Reading",
+  "category": "어학",
+  "description": "LC 45분(방송 강제 진행) + RC 75분, 총 200문항",
+  "source": {
+    "status": "verified",
+    "checkedAt": "2026-10-23",
+    "urls": [
+      "https://www.ets.org/toeic/about/listening-reading.html",
+      "https://www.iibc-global.org/english/toeic/test/lr/about/format.html"
+    ],
+    "note": "구성·문항 수는 공식 확인. LC 파트별 시간은 예상치, RC 배분은 권장 전략(PRD §6 결정 1)."
+  },
+  "sections": [
+    {
+      "id": "lc",
+      "name": "LC (듣기)",
+      "mode": "forced",
+      "minutes": 45,
+      "start": "auto",
+      "note": "방송 속도에 맞춰 강제 진행 — 파트 시간은 예상 위치",
+      "parts": [
+        { "id": "p1", "name": "Part 1", "desc": "사진 묘사", "questions": 6, "range": [1, 6], "minutes": 4 },
+        { "id": "p2", "name": "Part 2", "desc": "질의 응답", "questions": 25, "range": [7, 31], "minutes": 9 },
+        { "id": "p3", "name": "Part 3", "desc": "짧은 대화 (13지문)", "questions": 39, "range": [32, 70], "minutes": 18 },
+        { "id": "p4", "name": "Part 4", "desc": "짧은 담화 (10지문)", "questions": 30, "range": [71, 100], "minutes": 14 }
+      ]
+    },
+    {
+      "id": "rc",
+      "name": "RC (읽기)",
+      "mode": "self",
+      "minutes": 75,
+      "start": "auto",
+      "parts": [
+        { "id": "p5", "name": "Part 5", "desc": "문법/어휘", "questions": 30, "range": [101, 130], "minutes": 11 },
+        { "id": "p6", "name": "Part 6", "desc": "문법/공란/문장", "questions": 16, "range": [131, 146], "minutes": 8 },
+        { "id": "p7s", "name": "Part 7 단일", "desc": "독해 단일 지문", "questions": 29, "range": [147, 175], "minutes": 27 },
+        { "id": "p7m", "name": "Part 7 다중", "desc": "독해 이중·삼중 지문", "questions": 25, "range": [176, 200], "minutes": 24 },
+        { "id": "review", "name": "마킹·검토", "minutes": 5, "kind": "review" }
+      ],
+      "constraints": [
+        { "type": "sumMax", "parts": ["p5", "p6"], "minutes": 20, "label": "Part 5+6 ≤ 20분 (문항당 20~30초)", "linkable": true },
+        { "type": "maxSecPerQuestion", "parts": ["p7s", "p7m"], "seconds": 60, "label": "Part 7 문항당 최대 1분" }
+      ]
+    }
+  ]
+}

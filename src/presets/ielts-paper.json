@@ -1,0 +1,69 @@
+{
+  "id": "ielts-paper",
+  "name": "IELTS (Paper-based)",
+  "category": "어학",
+  "description": "Listening 30+10 → Reading 60 → Writing 60 (연속, 휴식 없음), Speaking 별도",
+  "source": {
+    "status": "verified",
+    "checkedAt": "2026-10-23",
+    "urls": [
+      "https://takeielts.britishcouncil.org/take-ielts/test-format",
+      "https://www.idp.com/malaysia/ielts/test-format/"
+    ],
+    "note": "섹션 시간은 공식 확인. 파트·지문·Task 분할 시간은 권장치(가정)."
+  },
+  "sections": [
+    {
+      "id": "listening",
+      "name": "Listening",
+      "mode": "forced",
+      "minutes": 40,
+      "start": "auto",
+      "note": "음원 약 30분 + 답안지 옮겨 적기 10분",
+      "parts": [
+        { "id": "l1", "name": "Part 1", "questions": 10, "range": [1, 10], "minutes": 7.5 },
+        { "id": "l2", "name": "Part 2", "questions": 10, "range": [11, 20], "minutes": 7.5 },
+        { "id": "l3", "name": "Part 3", "questions": 10, "range": [21, 30], "minutes": 7.5 },
+        { "id": "l4", "name": "Part 4", "questions": 10, "range": [31, 40], "minutes": 7.5 },
+        { "id": "transfer", "name": "답안 옮기기", "minutes": 10, "kind": "review" }
+      ]
+    },
+    {
+      "id": "reading",
+      "name": "Reading",
+      "mode": "self",
+      "minutes": 60,
+      "start": "auto",
+      "parts": [
+        { "id": "r1", "name": "Passage 1", "questions": 13, "range": [1, 13], "minutes": 17 },
+        { "id": "r2", "name": "Passage 2", "questions": 13, "range": [14, 26], "minutes": 19 },
+        { "id": "r3", "name": "Passage 3", "questions": 14, "range": [27, 40], "minutes": 21 },
+        { "id": "rreview", "name": "답안 검토", "minutes": 3, "kind": "review" }
+      ]
+    },
+    {
+      "id": "writing",
+      "name": "Writing",
+      "mode": "self",
+      "minutes": 60,
+      "start": "auto",
+      "parts": [
+        { "id": "w1", "name": "Task 1", "desc": "150단어 이상", "minutes": 20 },
+        { "id": "w2", "name": "Task 2", "desc": "250단어 이상", "minutes": 40 }
+      ]
+    },
+    {
+      "id": "speaking",
+      "name": "Speaking",
+      "mode": "forced",
+      "minutes": 14,
+      "start": "manual",
+      "note": "별도 일정 면접 (11~14분)",
+      "parts": [
+        { "id": "s1", "name": "Part 1", "desc": "인터뷰", "minutes": 5 },
+        { "id": "s2", "name": "Part 2", "desc": "준비 1분 + 롱턴 2분", "minutes": 4 },
+        { "id": "s3", "name": "Part 3", "desc": "토론", "minutes": 5 }
+      ]
+    }
+  ]
+}

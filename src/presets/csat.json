@@ -1,0 +1,31 @@
+{
+  "id": "csat",
+  "name": "대학수학능력시험 (수능)",
+  "category": "국가시험",
+  "description": "교시별 시험 — 교시 사이 쉬는 시간은 수동 시작",
+  "source": {
+    "status": "assumed",
+    "checkedAt": "2026-10-23",
+    "urls": [],
+    "note": "한국교육과정평가원 시행 공고로 확인 필요. 영어 듣기 시간은 예상치."
+  },
+  "sections": [
+    { "id": "korean", "name": "1교시 국어", "mode": "self", "minutes": 80, "start": "auto",
+      "parts": [{ "id": "korean-all", "name": "국어", "questions": 45, "minutes": 80 }] },
+    { "id": "math", "name": "2교시 수학", "mode": "self", "minutes": 100, "start": "manual",
+      "parts": [{ "id": "math-all", "name": "수학", "questions": 30, "minutes": 100 }] },
+    { "id": "english", "name": "3교시 영어", "mode": "self", "minutes": 70, "start": "manual",
+      "parts": [
+        { "id": "eng-listening", "name": "듣기", "desc": "방송", "questions": 17, "range": [1, 17], "minutes": 25 },
+        { "id": "eng-reading", "name": "독해", "questions": 28, "range": [18, 45], "minutes": 45 }
+      ] },
+    { "id": "history", "name": "4교시 한국사", "mode": "self", "minutes": 30, "start": "manual",
+      "parts": [{ "id": "history-all", "name": "한국사", "questions": 20, "minutes": 30 }] },
+    { "id": "inquiry1", "name": "4교시 탐구 1", "mode": "self", "minutes": 30, "start": "manual",
+      "parts": [{ "id": "inquiry1-all", "name": "탐구 1", "questions": 20, "minutes": 30 }] },
+    { "id": "inquiry2", "name": "4교시 탐구 2", "mode": "self", "minutes": 30, "start": "auto",
+      "parts": [{ "id": "inquiry2-all", "name": "탐구 2", "questions": 20, "minutes": 30 }] },
+    { "id": "foreign", "name": "5교시 제2외국어/한문", "mode": "self", "minutes": 40, "start": "manual",
+      "parts": [{ "id": "foreign-all", "name": "제2외국어/한문", "questions": 30, "minutes": 40 }] }
+  ]
+}
